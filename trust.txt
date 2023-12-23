@@ -1,0 +1,23 @@
+npx hardhat --network goerli setTrustedRemote --target-network optimism-goerli --contract OFTV2Mock
+npx hardhat --network optimism-goerli setTrustedRemote --target-network goerli --contract OFTV2Mock
+
+
+
+npx hardhat --network goerli setMinDstGas --packet-type 0 --target-network optimism-goerli  --contract OFTV2Mock --min-gas 100000
+npx hardhat --network optimism-goerli  setMinDstGas --packet-type 0 --target-network goerli --contract OFTV2Mock --min-gas 100000
+
+npx hardhat --network goerli oftv2Send --target-network optimism-goerli --qty 420 --contract OFTV2Mock
+
+
+npx hardhat --network goerli deploy --tags OmniCounter
+npx hardhat --network optimism-goerli deploy --tags OmniCounter
+
+
+npx hardhat --network goerli setTrustedRemote --target-network optimism-goerli --contract OmniCounter
+npx hardhat --network optimism-goerli setTrustedRemote --target-network optimism-goerli --contract OmniCounter
+npx hardhat --network optimism-goerli setTrustedRemote --target-network goerli --contract OmniCounter
+
+npx hardhat --network goerli incrementCounter --target-network optimism-goerli
+
+
+

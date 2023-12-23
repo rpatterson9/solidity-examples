@@ -1,0 +1,1187 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "circulatingSupply",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "_dstChainId",
+          "type": "uint16"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "_toAddress",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_payload",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint64",
+          "name": "_dstGasForCall",
+          "type": "uint64"
+        },
+        {
+          "internalType": "bool",
+          "name": "_useZro",
+          "type": "bool"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_adapterParams",
+          "type": "bytes"
+        }
+      ],
+      "name": "estimateSendAndCallFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "nativeFee",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "zroFee",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "_dstChainId",
+          "type": "uint16"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "_toAddress",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "_useZro",
+          "type": "bool"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_adapterParams",
+          "type": "bytes"
+        }
+      ],
+      "name": "estimateSendFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "nativeFee",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "zroFee",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "internalType": "uint16",
+          "name": "_dstChainId",
+          "type": "uint16"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "_toAddress",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_minAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_payload",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint64",
+          "name": "_dstGasForCall",
+          "type": "uint64"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address payable",
+              "name": "refundAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "zroPaymentAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "adapterParams",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct ICommonOFT.LzCallParams",
+          "name": "_callParams",
+          "type": "tuple"
+        }
+      ],
+      "name": "sendAndCall",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "internalType": "uint16",
+          "name": "_dstChainId",
+          "type": "uint16"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "_toAddress",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_minAmount",
+          "type": "uint256"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address payable",
+              "name": "refundAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "zroPaymentAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "adapterParams",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct ICommonOFT.LzCallParams",
+          "name": "_callParams",
+          "type": "tuple"
+        }
+      ],
+      "name": "sendFrom",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "token",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "circulatingSupply()": "9358928b",
+    "estimateSendAndCallFee(uint16,bytes32,uint256,bytes,uint64,bool,bytes)": "a4c51df5",
+    "estimateSendFee(uint16,bytes32,uint256,bool,bytes)": "365260b4",
+    "sendAndCall(address,uint16,bytes32,uint256,uint256,bytes,uint64,(address,address,bytes))": "455ba27d",
+    "sendFrom(address,uint16,bytes32,uint256,uint256,(address,address,bytes))": "2cdf0b95",
+    "supportsInterface(bytes4)": "01ffc9a7",
+    "token()": "fc0c546a"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.22+commit.4fc1097e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"circulatingSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"_dstChainId\",\"type\":\"uint16\"},{\"internalType\":\"bytes32\",\"name\":\"_toAddress\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"_payload\",\"type\":\"bytes\"},{\"internalType\":\"uint64\",\"name\":\"_dstGasForCall\",\"type\":\"uint64\"},{\"internalType\":\"bool\",\"name\":\"_useZro\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"_adapterParams\",\"type\":\"bytes\"}],\"name\":\"estimateSendAndCallFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"nativeFee\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"zroFee\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"_dstChainId\",\"type\":\"uint16\"},{\"internalType\":\"bytes32\",\"name\":\"_toAddress\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_useZro\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"_adapterParams\",\"type\":\"bytes\"}],\"name\":\"estimateSendFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"nativeFee\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"zroFee\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"internalType\":\"uint16\",\"name\":\"_dstChainId\",\"type\":\"uint16\"},{\"internalType\":\"bytes32\",\"name\":\"_toAddress\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_minAmount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"_payload\",\"type\":\"bytes\"},{\"internalType\":\"uint64\",\"name\":\"_dstGasForCall\",\"type\":\"uint64\"},{\"components\":[{\"internalType\":\"address payable\",\"name\":\"refundAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"zroPaymentAddress\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"adapterParams\",\"type\":\"bytes\"}],\"internalType\":\"struct ICommonOFT.LzCallParams\",\"name\":\"_callParams\",\"type\":\"tuple\"}],\"name\":\"sendAndCall\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"internalType\":\"uint16\",\"name\":\"_dstChainId\",\"type\":\"uint16\"},{\"internalType\":\"bytes32\",\"name\":\"_toAddress\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_minAmount\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"address payable\",\"name\":\"refundAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"zroPaymentAddress\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"adapterParams\",\"type\":\"bytes\"}],\"internalType\":\"struct ICommonOFT.LzCallParams\",\"name\":\"_callParams\",\"type\":\"tuple\"}],\"name\":\"sendFrom\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Interface of the IOFT core standard\",\"kind\":\"dev\",\"methods\":{\"circulatingSupply()\":{\"details\":\"returns the circulating amount of tokens on current chain\"},\"estimateSendFee(uint16,bytes32,uint256,bool,bytes)\":{\"details\":\"estimate send token `_tokenId` to (`_dstChainId`, `_toAddress`) _dstChainId - L0 defined chain id to send tokens too _toAddress - dynamic bytes array which contains the address to whom you are sending tokens to on the dstChain _amount - amount of the tokens to transfer _useZro - indicates to use zro to pay L0 fees _adapterParam - flexible bytes array to indicate messaging adapter services in L0\"},\"sendFrom(address,uint16,bytes32,uint256,uint256,(address,address,bytes))\":{\"details\":\"send `_amount` amount of token to (`_dstChainId`, `_toAddress`) from `_from` `_from` the owner of token `_dstChainId` the destination chain identifier `_toAddress` can be any size depending on the `dstChainId`. `_amount` the quantity of tokens in wei `_minAmount` the minimum amount of tokens to receive on dstChain `_refundAddress` the address LayerZero refunds if too much message fee is sent `_zroPaymentAddress` set to address(0x0) if not paying in ZRO (LayerZero Token) `_adapterParams` is a flexible bytes array to indicate messaging adapter services\"},\"supportsInterface(bytes4)\":{\"details\":\"Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas.\"},\"token()\":{\"details\":\"returns the address of the ERC20 token\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/token/oft/v2/fee/IOFTWithFee.sol\":\"IOFTWithFee\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@layerzerolabs/=node_modules/@layerzerolabs/\",\":@openzeppelin-3/=node_modules/@openzeppelin-3/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":erc721a/=node_modules/erc721a/\",\":hardhat-deploy/=node_modules/hardhat-deploy/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"contracts/token/oft/v2/fee/IOFTWithFee.sol\":{\"keccak256\":\"0x421a8c01522a683ef748adeabd1192b8965ef7473a094e673aa37fc49dc3571f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://954a807d7b4a3eeaf687e0e460fec551a7d3815df81ab1c45981717f270db4a2\",\"dweb:/ipfs/Qmeo7qUEc11CEXRsHwyxaPSRi6msHEpGvrkmiDnmSU1Pm8\"]},\"contracts/token/oft/v2/interfaces/ICommonOFT.sol\":{\"keccak256\":\"0x1d034ba786436c1fce8057352c87373098bd1d8026b24c8fbc7be28636d0c15d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c93d3b1e9baf70c3c3d12c3c14dc3e9dc97ccc4445861fd39a4010455f66e2ac\",\"dweb:/ipfs/QmQycGdfkqvTsnt7WSgc2Rku48aZoM6jRYnc8SRCh7VzeR\"]},\"node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.22+commit.4fc1097e"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "circulatingSupply",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint16",
+              "name": "_dstChainId",
+              "type": "uint16"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "_toAddress",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "_payload",
+              "type": "bytes"
+            },
+            {
+              "internalType": "uint64",
+              "name": "_dstGasForCall",
+              "type": "uint64"
+            },
+            {
+              "internalType": "bool",
+              "name": "_useZro",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes",
+              "name": "_adapterParams",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "estimateSendAndCallFee",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "nativeFee",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "zroFee",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint16",
+              "name": "_dstChainId",
+              "type": "uint16"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "_toAddress",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "_useZro",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes",
+              "name": "_adapterParams",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "estimateSendFee",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "nativeFee",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "zroFee",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_from",
+              "type": "address"
+            },
+            {
+              "internalType": "uint16",
+              "name": "_dstChainId",
+              "type": "uint16"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "_toAddress",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_minAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "_payload",
+              "type": "bytes"
+            },
+            {
+              "internalType": "uint64",
+              "name": "_dstGasForCall",
+              "type": "uint64"
+            },
+            {
+              "internalType": "struct ICommonOFT.LzCallParams",
+              "name": "_callParams",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "address payable",
+                  "name": "refundAddress",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "zroPaymentAddress",
+                  "type": "address"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "adapterParams",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "sendAndCall"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_from",
+              "type": "address"
+            },
+            {
+              "internalType": "uint16",
+              "name": "_dstChainId",
+              "type": "uint16"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "_toAddress",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_minAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "struct ICommonOFT.LzCallParams",
+              "name": "_callParams",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "address payable",
+                  "name": "refundAddress",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "zroPaymentAddress",
+                  "type": "address"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "adapterParams",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "sendFrom"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4",
+              "name": "interfaceId",
+              "type": "bytes4"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "supportsInterface",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "token",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "circulatingSupply()": {
+            "details": "returns the circulating amount of tokens on current chain"
+          },
+          "estimateSendFee(uint16,bytes32,uint256,bool,bytes)": {
+            "details": "estimate send token `_tokenId` to (`_dstChainId`, `_toAddress`) _dstChainId - L0 defined chain id to send tokens too _toAddress - dynamic bytes array which contains the address to whom you are sending tokens to on the dstChain _amount - amount of the tokens to transfer _useZro - indicates to use zro to pay L0 fees _adapterParam - flexible bytes array to indicate messaging adapter services in L0"
+          },
+          "sendFrom(address,uint16,bytes32,uint256,uint256,(address,address,bytes))": {
+            "details": "send `_amount` amount of token to (`_dstChainId`, `_toAddress`) from `_from` `_from` the owner of token `_dstChainId` the destination chain identifier `_toAddress` can be any size depending on the `dstChainId`. `_amount` the quantity of tokens in wei `_minAmount` the minimum amount of tokens to receive on dstChain `_refundAddress` the address LayerZero refunds if too much message fee is sent `_zroPaymentAddress` set to address(0x0) if not paying in ZRO (LayerZero Token) `_adapterParams` is a flexible bytes array to indicate messaging adapter services"
+          },
+          "supportsInterface(bytes4)": {
+            "details": "Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas."
+          },
+          "token()": {
+            "details": "returns the address of the ERC20 token"
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@layerzerolabs/=node_modules/@layerzerolabs/",
+        "@openzeppelin-3/=node_modules/@openzeppelin-3/",
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "erc721a/=node_modules/erc721a/",
+        "hardhat-deploy/=node_modules/hardhat-deploy/",
+        "hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/token/oft/v2/fee/IOFTWithFee.sol": "IOFTWithFee"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/token/oft/v2/fee/IOFTWithFee.sol": {
+        "keccak256": "0x421a8c01522a683ef748adeabd1192b8965ef7473a094e673aa37fc49dc3571f",
+        "urls": [
+          "bzz-raw://954a807d7b4a3eeaf687e0e460fec551a7d3815df81ab1c45981717f270db4a2",
+          "dweb:/ipfs/Qmeo7qUEc11CEXRsHwyxaPSRi6msHEpGvrkmiDnmSU1Pm8"
+        ],
+        "license": "MIT"
+      },
+      "contracts/token/oft/v2/interfaces/ICommonOFT.sol": {
+        "keccak256": "0x1d034ba786436c1fce8057352c87373098bd1d8026b24c8fbc7be28636d0c15d",
+        "urls": [
+          "bzz-raw://c93d3b1e9baf70c3c3d12c3c14dc3e9dc97ccc4445861fd39a4010455f66e2ac",
+          "dweb:/ipfs/QmQycGdfkqvTsnt7WSgc2Rku48aZoM6jRYnc8SRCh7VzeR"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+        "keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+        "urls": [
+          "bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+          "dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/token/oft/v2/fee/IOFTWithFee.sol",
+    "id": 7479,
+    "exportedSymbols": {
+      "ICommonOFT": [
+        8634
+      ],
+      "IERC165": [
+        17749
+      ],
+      "IOFTWithFee": [
+        7478
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "33:1174:27",
+    "nodes": [
+      {
+        "id": 7436,
+        "nodeType": "PragmaDirective",
+        "src": "33:24:27",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0"
+        ]
+      },
+      {
+        "id": 7437,
+        "nodeType": "ImportDirective",
+        "src": "59:38:27",
+        "nodes": [],
+        "absolutePath": "contracts/token/oft/v2/interfaces/ICommonOFT.sol",
+        "file": "../interfaces/ICommonOFT.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 7479,
+        "sourceUnit": 8635,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 7478,
+        "nodeType": "ContractDefinition",
+        "src": "151:1055:27",
+        "nodes": [
+          {
+            "id": 7457,
+            "nodeType": "FunctionDefinition",
+            "src": "835:156:27",
+            "nodes": [],
+            "documentation": {
+              "id": 7441,
+              "nodeType": "StructuredDocumentation",
+              "src": "194:636:27",
+              "text": " @dev send `_amount` amount of token to (`_dstChainId`, `_toAddress`) from `_from`\n `_from` the owner of token\n `_dstChainId` the destination chain identifier\n `_toAddress` can be any size depending on the `dstChainId`.\n `_amount` the quantity of tokens in wei\n `_minAmount` the minimum amount of tokens to receive on dstChain\n `_refundAddress` the address LayerZero refunds if too much message fee is sent\n `_zroPaymentAddress` set to address(0x0) if not paying in ZRO (LayerZero Token)\n `_adapterParams` is a flexible bytes array to indicate messaging adapter services"
+            },
+            "functionSelector": "2cdf0b95",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "sendFrom",
+            "nameLocation": "844:8:27",
+            "parameters": {
+              "id": 7455,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7443,
+                  "mutability": "mutable",
+                  "name": "_from",
+                  "nameLocation": "861:5:27",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7457,
+                  "src": "853:13:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7442,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "853:7:27",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7445,
+                  "mutability": "mutable",
+                  "name": "_dstChainId",
+                  "nameLocation": "875:11:27",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7457,
+                  "src": "868:18:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 7444,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "868:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7447,
+                  "mutability": "mutable",
+                  "name": "_toAddress",
+                  "nameLocation": "896:10:27",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7457,
+                  "src": "888:18:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 7446,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "888:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7449,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "913:7:27",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7457,
+                  "src": "908:12:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7448,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "908:4:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7451,
+                  "mutability": "mutable",
+                  "name": "_minAmount",
+                  "nameLocation": "927:10:27",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7457,
+                  "src": "922:15:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7450,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "922:4:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7454,
+                  "mutability": "mutable",
+                  "name": "_callParams",
+                  "nameLocation": "961:11:27",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7457,
+                  "src": "939:33:27",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_LzCallParams_$8582_calldata_ptr",
+                    "typeString": "struct ICommonOFT.LzCallParams"
+                  },
+                  "typeName": {
+                    "id": 7453,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 7452,
+                      "name": "LzCallParams",
+                      "nameLocations": [
+                        "939:12:27"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 8582,
+                      "src": "939:12:27"
+                    },
+                    "referencedDeclaration": 8582,
+                    "src": "939:12:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_LzCallParams_$8582_storage_ptr",
+                      "typeString": "struct ICommonOFT.LzCallParams"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "852:121:27"
+            },
+            "returnParameters": {
+              "id": 7456,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "990:0:27"
+            },
+            "scope": 7478,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 7477,
+            "nodeType": "FunctionDefinition",
+            "src": "997:207:27",
+            "nodes": [],
+            "functionSelector": "455ba27d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "sendAndCall",
+            "nameLocation": "1006:11:27",
+            "parameters": {
+              "id": 7475,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7459,
+                  "mutability": "mutable",
+                  "name": "_from",
+                  "nameLocation": "1026:5:27",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7477,
+                  "src": "1018:13:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7458,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1018:7:27",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7461,
+                  "mutability": "mutable",
+                  "name": "_dstChainId",
+                  "nameLocation": "1040:11:27",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7477,
+                  "src": "1033:18:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 7460,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1033:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7463,
+                  "mutability": "mutable",
+                  "name": "_toAddress",
+                  "nameLocation": "1061:10:27",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7477,
+                  "src": "1053:18:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 7462,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1053:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7465,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "1078:7:27",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7477,
+                  "src": "1073:12:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7464,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1073:4:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7467,
+                  "mutability": "mutable",
+                  "name": "_minAmount",
+                  "nameLocation": "1092:10:27",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7477,
+                  "src": "1087:15:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7466,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1087:4:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7469,
+                  "mutability": "mutable",
+                  "name": "_payload",
+                  "nameLocation": "1119:8:27",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7477,
+                  "src": "1104:23:27",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 7468,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1104:5:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7471,
+                  "mutability": "mutable",
+                  "name": "_dstGasForCall",
+                  "nameLocation": "1136:14:27",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7477,
+                  "src": "1129:21:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 7470,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1129:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7474,
+                  "mutability": "mutable",
+                  "name": "_callParams",
+                  "nameLocation": "1174:11:27",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7477,
+                  "src": "1152:33:27",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_LzCallParams_$8582_calldata_ptr",
+                    "typeString": "struct ICommonOFT.LzCallParams"
+                  },
+                  "typeName": {
+                    "id": 7473,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 7472,
+                      "name": "LzCallParams",
+                      "nameLocations": [
+                        "1152:12:27"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 8582,
+                      "src": "1152:12:27"
+                    },
+                    "referencedDeclaration": 8582,
+                    "src": "1152:12:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_LzCallParams_$8582_storage_ptr",
+                      "typeString": "struct ICommonOFT.LzCallParams"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1017:169:27"
+            },
+            "returnParameters": {
+              "id": 7476,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1203:0:27"
+            },
+            "scope": 7478,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 7439,
+              "name": "ICommonOFT",
+              "nameLocations": [
+                "176:10:27"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 8634,
+              "src": "176:10:27"
+            },
+            "id": 7440,
+            "nodeType": "InheritanceSpecifier",
+            "src": "176:10:27"
+          }
+        ],
+        "canonicalName": "IOFTWithFee",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 7438,
+          "nodeType": "StructuredDocumentation",
+          "src": "99:51:27",
+          "text": " @dev Interface of the IOFT core standard"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          7478,
+          8634,
+          17749
+        ],
+        "name": "IOFTWithFee",
+        "nameLocation": "161:11:27",
+        "scope": 7479,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 27
+}
